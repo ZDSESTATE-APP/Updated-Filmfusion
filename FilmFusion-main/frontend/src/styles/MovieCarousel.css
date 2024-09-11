@@ -1,0 +1,63 @@
+.movie-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.movie-box {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.movie-box:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.movie-box:hover .movie-info {
+  transform: translateY(0);
+}
+
+.movie-title {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.movie-year, .movie-type {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.imdb-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: #f3ce13;
+  text-decoration: none;
+}
+
+.imdb-link:hover {
+  text-decoration: underline;
+}

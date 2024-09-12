@@ -1,63 +1,67 @@
 .auth-container {
-  background-image: url('../assets/logo5.png');
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 2rem;
-  color: whitesmoke;
+  min-height: 100vh;
+  background-image: url('../assets/logo5.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
 }
 
 .form-styling {
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-  gap: 1.5em;
-  border-radius: 18px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  align-items: center;
-  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 40px;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .input-styling {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 18px;
-  border: 2px solid #ccc;
-  color: white;
-  font-weight: 400;
-  padding: 0.8em 1.2em;
   width: 100%;
-  transition: all 0.3s ease;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
 }
 
-.input-styling:focus {
-  outline: none;
-  border-color: #cf3f3f;
-  box-shadow: 0 0 0 2px rgba(207, 63, 63, 0.2);
+.input-styling::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .signup-btn {
-  border-radius: 18px;
   width: 100%;
-  padding: 0.8em;
-  background-color: #cf3f3f;
-  color: white;
+  padding: 15px;
+  border-radius: 10px;
   border: none;
+  background-color: #cf3f3f;
+  color: #fff;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .signup-btn:hover {
-  background-color: #a33232;
+  background-color: #e85656;
 }
 
-.error {
-  color: #ff6b6b;
-  margin-bottom: 1rem;
+@media (max-width: 768px) {
+  .form-styling {
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 }
